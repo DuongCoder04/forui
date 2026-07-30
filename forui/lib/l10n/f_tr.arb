@@ -48,5 +48,7 @@
   "timePickerHourSemanticsLabel": "Saat",
   "timePickerMinuteSemanticsLabel": "Dakika",
   "autocompleteResults": "{count} sonuç mevcut",
-  "autocompleteSuggestion": "Öneri: {suggestion}"
+  "autocompleteSuggestion": "Öneri: {suggestion}",
+  "breadcrumbCollapsedSemanticsLabel": "Daha fazla",
+  "paginationPageSemanticsLabel": "Sayfa {page}"
 }

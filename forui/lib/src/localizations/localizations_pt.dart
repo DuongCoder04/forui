@@ -39,6 +39,9 @@ class FLocalizationsPt extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Mais';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Próximo mês';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsPt extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Fechar';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Página $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -199,6 +207,9 @@ class FLocalizationsPtPt extends FLocalizationsPt {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Mais';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Mês seguinte';
 
   @override
@@ -257,6 +268,11 @@ class FLocalizationsPtPt extends FLocalizationsPt {
 
   @override
   String get headerCloseSemanticsLabel => 'Fechar';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Página $page';
+  }
 
   @override
   String get popoverSemanticsLabel => 'Janela sobreposta';

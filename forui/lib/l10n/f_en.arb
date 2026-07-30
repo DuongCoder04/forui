@@ -46,6 +46,10 @@
       }
     }
   },
+  "breadcrumbCollapsedSemanticsLabel": "More",
+  "@breadcrumbCollapsedSemanticsLabel": {
+    "description": "The label for a collapsed breadcrumb item's trigger, which reveals the hidden breadcrumb items."
+  },
   "calendarNextMonthSemanticsLabel": "Next month",
   "@calendarNextMonthSemanticsLabel": {
     "description": "The label for the calendar header's next-month navigation button."
@@ -125,6 +129,15 @@
   "headerCloseSemanticsLabel": "Close",
   "@headerCloseSemanticsLabel": {
     "description": "The default semantic label for a header's close button."
+  },
+  "paginationPageSemanticsLabel": "Page {page}",
+  "@paginationPageSemanticsLabel": {
+    "description": "The label for a page button in a pagination control, e.g. 'Page 5'.",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      }
+    }
   },
   "paginationPreviousSemanticsLabel": "Previous",
   "@paginationPreviousSemanticsLabel": {

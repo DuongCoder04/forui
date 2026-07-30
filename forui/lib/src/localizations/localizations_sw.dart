@@ -39,6 +39,9 @@ class FLocalizationsSw extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Zaidi';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Mwezi ujao';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsSw extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Funga';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Ukurasa $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Iliyotangulia';

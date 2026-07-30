@@ -39,6 +39,9 @@ class FLocalizationsIs extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Meira';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Næsti mánuður';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsIs extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Loka';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Síða $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Fyrri';

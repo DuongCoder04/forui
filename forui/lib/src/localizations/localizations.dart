@@ -322,6 +322,12 @@ abstract class FLocalizations {
   /// **'Tab {tabIndex} of {tabCount}'**
   String bottomNavigationBarTabSemanticsLabel(int tabIndex, int tabCount);
 
+  /// The label for a collapsed breadcrumb item's trigger, which reveals the hidden breadcrumb items.
+  ///
+  /// In en, this message translates to:
+  /// **'More'**
+  String get breadcrumbCollapsedSemanticsLabel;
+
   /// The label for the calendar header's next-month navigation button.
   ///
   /// In en, this message translates to:
@@ -441,6 +447,12 @@ abstract class FLocalizations {
   /// In en, this message translates to:
   /// **'Close'**
   String get headerCloseSemanticsLabel;
+
+  /// The label for a page button in a pagination control, e.g. 'Page 5'.
+  ///
+  /// In en, this message translates to:
+  /// **'Page {page}'**
+  String paginationPageSemanticsLabel(int page);
 
   /// The label for the previous button in a pagination control.
   ///

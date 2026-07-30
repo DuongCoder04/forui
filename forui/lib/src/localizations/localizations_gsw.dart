@@ -39,6 +39,9 @@ class FLocalizationsGsw extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Meh';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Nächste Monet';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsGsw extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Schliessen';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Seite $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Vorig';

@@ -39,6 +39,9 @@ class FLocalizationsEu extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Gehiago';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Hurrengo hilabetea';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsEu extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Itxi';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '$page. orria';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Aurrekoa';

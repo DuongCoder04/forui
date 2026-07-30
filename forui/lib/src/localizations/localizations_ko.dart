@@ -39,6 +39,9 @@ class FLocalizationsKo extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => '더보기';
+
+  @override
   String get calendarNextMonthSemanticsLabel => '다음 달';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsKo extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => '닫기';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '$page페이지';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';

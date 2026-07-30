@@ -47,5 +47,7 @@
   "timePickerHourSemanticsLabel": "Години",
   "timePickerMinuteSemanticsLabel": "Хвилини",
   "autocompleteResults": "Доступно результатів: {count}",
-  "autocompleteSuggestion": "Пропозиція: {suggestion}"
+  "autocompleteSuggestion": "Пропозиція: {suggestion}",
+  "breadcrumbCollapsedSemanticsLabel": "Більше",
+  "paginationPageSemanticsLabel": "Сторінка {page}"
 }

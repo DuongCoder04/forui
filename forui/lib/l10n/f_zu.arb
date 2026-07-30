@@ -48,5 +48,7 @@
   "timePickerHourSemanticsLabel": "Ihora",
   "timePickerMinuteSemanticsLabel": "Iminithi",
   "autocompleteResults": "Imiphumela engu-{count} iyatholakala",
-  "autocompleteSuggestion": "Isiphakamiso: {suggestion}"
+  "autocompleteSuggestion": "Isiphakamiso: {suggestion}",
+  "breadcrumbCollapsedSemanticsLabel": "Okuningi",
+  "paginationPageSemanticsLabel": "Ikhasi {page}"
 }

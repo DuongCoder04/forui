@@ -39,6 +39,9 @@ class FLocalizationsSq extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Më shumë';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Muaji tjetër';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsSq extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Mbyll';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Faqja $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'E mëparshme';

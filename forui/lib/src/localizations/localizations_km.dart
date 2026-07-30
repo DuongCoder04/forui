@@ -39,6 +39,9 @@ class FLocalizationsKm extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'ច្រើនទៀត';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'ខែបន្ទាប់';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsKm extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'បិទ';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'ទំព័រ $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';

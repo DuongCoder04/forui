@@ -39,6 +39,9 @@ class FLocalizationsUz extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Yana';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Keyingi oy';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsUz extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Yopish';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '$page-sahifa';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Oldingi';

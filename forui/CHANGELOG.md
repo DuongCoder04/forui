@@ -1,3 +1,54 @@
+## 0.25.0 (Next)
+
+### `FBreadcrumb`
+* Add `FBreadcrumbItem.collapsed(menuSemanticsLabel: ...)` and `FBreadcrumbItem.collapsedTiles(menuSemanticsLabel: ...)`.
+
+* **Breaking** Change `FBreadcrumbItem.collapsed(semanticsLabel: ...)` and
+  `FBreadcrumbItem.collapsedTiles(semanticsLabel: ...)` to label the trigger. Use `menuSemanticsLabel` to label the menu.
+
+* Fix `FBreadcrumbItem` ignoring `autofocus`, `focusNode`, `onFocusChange`, `onHoverChange`, `onVariantChange` and
+  `FBreadcrumbStyle.focusedOutlineStyle`.
+* Fix `FBreadcrumbItem` without an `onPress` being announced as a disabled button and changing color on hover.
+
+
+### `FButton`
+* Add `FButton.semanticsTooltip`.
+
+
+### `FHeaderAction`
+* Add `FHeaderAction.semanticsTooltip`.
+
+
+### `FItem` & `FTile`
+* Add `FItem.semanticsTooltip` and `FTile.semanticsTooltip`.
+
+
+### `FPagination`
+* Fix `FPagination`'s previous and next buttons being enabled on the first and last pages.
+* Fix `FPagination`'s ellipsis being announced by screen readers.
+* Fix `FPagination`'s page buttons being announced without their page number.
+
+
+### `FPopover`
+* Add `FPopover.traversalGrouped`.
+
+* Fix `FPopover` content not being traversed immediately after its child.
+
+
+### `FPortal`
+* Add `FPortal.traversalGrouped`.
+
+* Fix `FPortal` content not being traversed immediately after its child.
+
+
+### `FTappable`
+* Add `FTappable.semanticsTooltip`.
+
+
+### `FTooltip`
+* **Breaking** Remove `FTooltip.semanticsLabel`. Set `semanticsTooltip` on the trigger instead.
+
+
 ## 0.24.3
 
 ### `FAutocomplete`

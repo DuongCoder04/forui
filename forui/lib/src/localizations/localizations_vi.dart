@@ -39,6 +39,9 @@ class FLocalizationsVi extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Thêm';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Tháng sau';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsVi extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Đóng';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Trang $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Trước';

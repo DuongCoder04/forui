@@ -39,6 +39,9 @@ class FLocalizationsKa extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'მეტი';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'შემდეგი თვე';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsKa extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'დახურვა';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'გვერდი $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';

@@ -151,6 +151,7 @@ abstract interface class FBreadcrumbItem extends Widget {
     FTappableVariantChangeCallback? onVariantChange,
     TraversalEdgeBehavior traversalEdgeBehavior,
     String? semanticsLabel,
+    String? menuSemanticsLabel,
     Key? key,
   }) = _CollapsedCrumb;
 
@@ -186,6 +187,7 @@ abstract interface class FBreadcrumbItem extends Widget {
     FTappableVariantChangeCallback? onVariantChange,
     TraversalEdgeBehavior traversalEdgeBehavior,
     String? semanticsLabel,
+    String? menuSemanticsLabel,
     Key? key,
   }) = _CollapsedCrumb.tiles;
 }
@@ -216,12 +218,26 @@ class _Crumb extends StatelessWidget implements FBreadcrumbItem {
   @override
   Widget build(BuildContext context) {
     final style = FBreadcrumbItemData.of(context).style;
-    final focusedOutlineStyle = context.theme.style.focusedOutlineStyle;
+
+    if (onPress == null) {
+      return Semantics(
+        selected: current ? true : null,
+        child: DefaultTextStyle(
+          style: style.textStyle.resolve(<FVariant>{if (current) FTappableVariant.selected, context.platformVariant}),
+          child: Padding(padding: style.padding, child: child),
+        ),
+      );
+    }
 
     return FTappable(
       style: style.tappableStyle,
-      focusedOutlineStyle: focusedOutlineStyle,
+      focusedOutlineStyle: style.focusedOutlineStyle,
       selected: current,
+      autofocus: autofocus,
+      focusNode: focusNode,
+      onFocusChange: onFocusChange,
+      onHoverChange: onHoverChange,
+      onVariantChange: onVariantChange,
       onPress: onPress,
       builder: (_, variants, child) => DefaultTextStyle(style: style.textStyle.resolve(variants), child: child!),
       child: Padding(padding: style.padding, child: child),
@@ -271,6 +287,7 @@ class _CollapsedCrumb extends StatefulWidget implements FBreadcrumbItem {
   final FTappableVariantChangeCallback? onVariantChange;
   final TraversalEdgeBehavior? traversalEdgeBehavior;
   final String? semanticsLabel;
+  final String? menuSemanticsLabel;
 
   const _CollapsedCrumb({
     required List<FItemGroup> menu,
@@ -293,6 +310,7 @@ class _CollapsedCrumb extends StatefulWidget implements FBreadcrumbItem {
     this.cutout = true,
     this.cutoutBuilder = FModalBarrier.defaultCutoutBuilder,
     this.semanticsLabel,
+    this.menuSemanticsLabel,
     this.autofocus = false,
     this.focusNode,
     this.onFocusChange,
@@ -324,6 +342,7 @@ class _CollapsedCrumb extends StatefulWidget implements FBreadcrumbItem {
     this.cutout = true,
     this.cutoutBuilder = FModalBarrier.defaultCutoutBuilder,
     this.semanticsLabel,
+    this.menuSemanticsLabel,
     this.autofocus = false,
     this.focusNode,
     this.onFocusChange,
@@ -364,7 +383,8 @@ class _CollapsedCrumb extends StatefulWidget implements FBreadcrumbItem {
       ..add(ObjectFlagProperty.has('onHoverChange', onHoverChange))
       ..add(ObjectFlagProperty.has('onVariantChange', onVariantChange))
       ..add(EnumProperty('traversalEdgeBehavior', traversalEdgeBehavior))
-      ..add(StringProperty('semanticsLabel', semanticsLabel));
+      ..add(StringProperty('semanticsLabel', semanticsLabel))
+      ..add(StringProperty('menuSemanticsLabel', menuSemanticsLabel));
   }
 }
 
@@ -398,11 +418,15 @@ class _CollapsedCrumbState extends State<_CollapsedCrumb> with SingleTickerProvi
   @override
   Widget build(BuildContext context) {
     final style = FBreadcrumbItemData.of(context).style;
+    final localizations = FLocalizations.of(context) ?? FDefaultLocalizations();
     final child = ListenableBuilder(
       listenable: _controller,
       builder: (context, child) => FTappable(
         focusedOutlineStyle: style.focusedOutlineStyle,
+        semanticsLabel: widget.semanticsLabel ?? localizations.breadcrumbCollapsedSemanticsLabel,
         semanticsExpanded: _controller.status.isForwardOrCompleted,
+        onHoverChange: widget.onHoverChange,
+        onVariantChange: widget.onVariantChange,
         onPress: _controller.toggle,
         child: child,
       ),
@@ -434,7 +458,7 @@ class _CollapsedCrumbState extends State<_CollapsedCrumb> with SingleTickerProvi
         maxHeight: widget.maxHeight,
         intrinsicWidth: widget.intrinsicWidth,
         dragStartBehavior: widget.dragStartBehavior,
-        semanticsLabel: widget.semanticsLabel,
+        semanticsLabel: widget.menuSemanticsLabel,
         divider: widget.divider,
         menu: menu,
         child: child,
@@ -460,7 +484,7 @@ class _CollapsedCrumbState extends State<_CollapsedCrumb> with SingleTickerProvi
         maxHeight: widget.maxHeight,
         intrinsicWidth: widget.intrinsicWidth,
         dragStartBehavior: widget.dragStartBehavior,
-        semanticsLabel: widget.semanticsLabel,
+        semanticsLabel: widget.menuSemanticsLabel,
         divider: widget.divider,
         menu: widget.tileMenu!,
         child: child,

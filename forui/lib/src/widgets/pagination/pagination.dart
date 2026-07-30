@@ -100,32 +100,13 @@ class _FPaginationState extends State<FPagination> {
     final style = widget.style(context.theme.paginationStyle);
     final localizations = FLocalizations.of(context) ?? FDefaultLocalizations();
 
-    final previous =
-        widget.previous ??
-        Action(
-          style: style,
-          semanticsLabel: localizations.paginationPreviousSemanticsLabel,
-          onPress: _controller.previous,
-          child: context.theme.icons.chevronLeft(context),
-        );
-    final next =
-        widget.next ??
-        Action(
-          style: style,
-          semanticsLabel: localizations.paginationNextSemanticsLabel,
-          onPress: _controller.next,
-          child: context.theme.icons.chevronRight(context),
-        );
-
-    final lastPage = _controller.pages - 1;
-
     final ellipsis = Padding(
       padding: style.itemPadding,
       child: ConstrainedBox(
         constraints: style.itemConstraints,
         child: DefaultTextStyle(
           style: style.ellipsisTextStyle,
-          child: const Center(child: Text('...')),
+          child: const ExcludeSemantics(child: Center(child: Text('...'))),
         ),
       ),
     );
@@ -134,6 +115,25 @@ class _FPaginationState extends State<FPagination> {
       listenable: _controller,
       builder: (context, _) {
         final (start, end) = _controller.siblingRange;
+        final lastPage = _controller.pages - 1;
+
+        // The actions are built here so that they re-evaluate whether they are at an edge whenever the page changes.
+        final previous =
+            widget.previous ??
+            Action(
+              style: style,
+              semanticsLabel: localizations.paginationPreviousSemanticsLabel,
+              onPress: _controller.value == 0 ? null : _controller.previous,
+              child: context.theme.icons.chevronLeft(context),
+            );
+        final next =
+            widget.next ??
+            Action(
+              style: style,
+              semanticsLabel: localizations.paginationNextSemanticsLabel,
+              onPress: _controller.value == lastPage ? null : _controller.next,
+              child: context.theme.icons.chevronRight(context),
+            );
 
         return Row(
           mainAxisAlignment: .center,
@@ -197,7 +197,9 @@ class FPaginationItemData extends InheritedWidget {
 class Action extends StatelessWidget {
   final FPaginationStyle style;
   final String semanticsLabel;
-  final VoidCallback onPress;
+
+  /// Null when the action is at an edge of the page range, which disables it.
+  final VoidCallback? onPress;
   final Widget child;
 
   const Action({
@@ -248,6 +250,8 @@ class _Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FPaginationItemData(:page, :controller, :style) = FPaginationItemData.of(context);
+    final localizations = FLocalizations.of(context) ?? FDefaultLocalizations();
+
     return Padding(
       padding: style.itemPadding,
       child: ListenableBuilder(
@@ -255,6 +259,7 @@ class _Page extends StatelessWidget {
         builder: (_, _) => FTappable(
           style: style.pageTappableStyle,
           focusedOutlineStyle: style.focusedOutlineStyle,
+          semanticsLabel: localizations.paginationPageSemanticsLabel(page + 1),
           selected: controller.value == page,
           onPress: () => controller.value = page,
           builder: (_, variants, _) => DecoratedBox(
@@ -263,7 +268,8 @@ class _Page extends StatelessWidget {
               constraints: style.itemConstraints,
               child: DefaultTextStyle(
                 style: style.itemTextStyle.resolve(variants),
-                child: Center(child: Text('${page + 1}')),
+                // The page number is excluded so that it is not announced after the tappable's label.
+                child: ExcludeSemantics(child: Center(child: Text('${page + 1}'))),
               ),
             ),
           ),

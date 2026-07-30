@@ -39,6 +39,9 @@ class FLocalizationsAs extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'অধিক';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'পৰৱৰ্তী মাহ';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsAs extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'বন্ধ কৰক';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'পৃষ্ঠা $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';

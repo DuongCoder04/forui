@@ -39,6 +39,9 @@ class FLocalizationsZu extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Okuningi';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Inyanga elandelayo';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsZu extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Vala';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Ikhasi $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Okwedlule';

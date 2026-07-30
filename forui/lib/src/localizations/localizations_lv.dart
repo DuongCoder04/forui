@@ -39,6 +39,9 @@ class FLocalizationsLv extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Vairāk';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Nākamais mēnesis';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsLv extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Aizvērt';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '$page. lapa';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Iepriekšējais';

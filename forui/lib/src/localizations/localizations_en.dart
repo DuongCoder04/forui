@@ -45,6 +45,9 @@ class FLocalizationsEn extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -103,6 +106,11 @@ class FLocalizationsEn extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -211,6 +219,9 @@ class FLocalizationsEnAu extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -269,6 +280,11 @@ class FLocalizationsEnAu extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -377,6 +393,9 @@ class FLocalizationsEnCa extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -435,6 +454,11 @@ class FLocalizationsEnCa extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -543,6 +567,9 @@ class FLocalizationsEnGb extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -601,6 +628,11 @@ class FLocalizationsEnGb extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -709,6 +741,9 @@ class FLocalizationsEnIe extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -767,6 +802,11 @@ class FLocalizationsEnIe extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -875,6 +915,9 @@ class FLocalizationsEnIn extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -933,6 +976,11 @@ class FLocalizationsEnIn extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -1041,6 +1089,9 @@ class FLocalizationsEnNz extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -1099,6 +1150,11 @@ class FLocalizationsEnNz extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -1207,6 +1263,9 @@ class FLocalizationsEnSg extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -1265,6 +1324,11 @@ class FLocalizationsEnSg extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';
@@ -1373,6 +1437,9 @@ class FLocalizationsEnZa extends FLocalizationsEn {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'More';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Next month';
 
   @override
@@ -1431,6 +1498,11 @@ class FLocalizationsEnZa extends FLocalizationsEn {
 
   @override
   String get headerCloseSemanticsLabel => 'Close';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Page $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Previous';

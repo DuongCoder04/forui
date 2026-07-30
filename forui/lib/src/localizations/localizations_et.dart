@@ -39,6 +39,9 @@ class FLocalizationsEt extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Rohkem';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Järgmine kuu';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsEt extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Sule';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '$page. leht';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Eelmine';

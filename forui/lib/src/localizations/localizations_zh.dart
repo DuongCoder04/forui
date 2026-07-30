@@ -39,6 +39,9 @@ class FLocalizationsZh extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => '更多';
+
+  @override
   String get calendarNextMonthSemanticsLabel => '下个月';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsZh extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => '关闭';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '第 $page 页';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => '上一个';
@@ -199,6 +207,9 @@ class FLocalizationsZhHk extends FLocalizationsZh {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => '更多';
+
+  @override
   String get calendarNextMonthSemanticsLabel => '下個月';
 
   @override
@@ -257,6 +268,11 @@ class FLocalizationsZhHk extends FLocalizationsZh {
 
   @override
   String get headerCloseSemanticsLabel => '關閉';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '第 $page 頁';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => '上一個';
@@ -359,6 +375,9 @@ class FLocalizationsZhTw extends FLocalizationsZh {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => '更多';
+
+  @override
   String get calendarNextMonthSemanticsLabel => '下個月';
 
   @override
@@ -417,6 +436,11 @@ class FLocalizationsZhTw extends FLocalizationsZh {
 
   @override
   String get headerCloseSemanticsLabel => '關閉';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '第 $page 頁';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => '上一個';

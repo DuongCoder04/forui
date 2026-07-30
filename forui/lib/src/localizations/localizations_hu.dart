@@ -39,6 +39,9 @@ class FLocalizationsHu extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Továbbiak';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Következő hónap';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsHu extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Bezárás';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return '$page. oldal';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Előző';

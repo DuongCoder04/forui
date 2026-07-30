@@ -48,5 +48,7 @@
   "timePickerHourSemanticsLabel": "Time",
   "timePickerMinuteSemanticsLabel": "Minutt",
   "autocompleteResults": "{count} resultater tilgjengelig",
-  "autocompleteSuggestion": "Forslag: {suggestion}"
+  "autocompleteSuggestion": "Forslag: {suggestion}",
+  "breadcrumbCollapsedSemanticsLabel": "Mer",
+  "paginationPageSemanticsLabel": "Side {page}"
 }

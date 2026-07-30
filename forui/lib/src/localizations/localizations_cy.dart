@@ -39,6 +39,9 @@ class FLocalizationsCy extends FLocalizations {
   }
 
   @override
+  String get breadcrumbCollapsedSemanticsLabel => 'Rhagor';
+
+  @override
   String get calendarNextMonthSemanticsLabel => 'Mis nesaf';
 
   @override
@@ -97,6 +100,11 @@ class FLocalizationsCy extends FLocalizations {
 
   @override
   String get headerCloseSemanticsLabel => 'Cau';
+
+  @override
+  String paginationPageSemanticsLabel(int page) {
+    return 'Tudalen $page';
+  }
 
   @override
   String get paginationPreviousSemanticsLabel => 'Blaenorol';
