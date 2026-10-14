@@ -2,7 +2,6 @@
 name: release-all
 description: Prepare, PR, and release all packages at the same version
 argument-hint: "<version>"
-disable-model-invocation: true
 ---
 
 Release all packages (forui_lucide, forui_phosphor, forui, forui_hooks) at version $0.

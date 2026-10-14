@@ -2,7 +2,6 @@
 name: release
 description: Prepare, PR, and release a single package
 argument-hint: "<package> <version>"
-disable-model-invocation: true
 ---
 
 Release $0 at version $1.
