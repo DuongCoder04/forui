@@ -1,3 +1,9 @@
+## 0.27.7
+
+### `FTimeField`
+* Fix 24-hour `FTimeField` rejecting `0`-hour.
+
+
 ## 0.27.6
 
 ### `FOverlay`
